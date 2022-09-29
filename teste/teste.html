@@ -5,9 +5,121 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste</title>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script>
+        $(function() {
+            $( "#tabs" ).tabs();
+            $(".conteiner").draggable({handle: "#nav"});
+        });
+    </script>
+
+    <style>
+    .ui-widget-header {
+        border: 1px solid #aaaaaa;
+        background: #6b6b6b;
+        color: #222222;
+        font-weight: bold;
+    }
+
+    #tabs {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    #inum {
+        width: 100px;
+    }
+
+    #itel {
+        width: 200px;
+    }
+
+    #icnpj {
+        width: 200px;
+    }
+
+    </style>
 </head>
 <body>
+    <div id="tabs" class="conteiner">
+        <ul style="cursor: move;" id="nav">
+            <li><a href="#aba-1">Dados Pessoais</a></li>
+            <li><a href="#aba-2">Dados da Empresa</a></li>
+            <li><a href="#aba-3">Produtos</a></li>
+        </ul>
+        <div id="aba-1">
+            <form action="cadastro.php" method="post" autocomplete="off">
+            
+                    <div class="form-group">
+                        <label for="inome">Nome completo</label>
+                        <input type="text" class="form-control" name="nome" id="inome" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="iend">Endereço</label>
+                        <input type="text" class="form-control" name="end" id="iend">
+                        <small id="emailHelp" class="form-text text-muted">Ex.: Rua Praça da Bandeira, nº25, Centro, Itacaré</small>
+                    </div>
+          
+                    <div class="form-group">
+                        <label for="inum">ID</label>
+                        <input type="number" class="form-control" name="num" id="inum" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="itel">Telefone de contato</label>
+                        <input type="number" class="form-control" name="tel" id="itel" required placeholder="(xx) x xxxx-xxxx">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                
+            </form>
+        </div>
+        <div id="aba-2">
+            <form action="cadastro.php" method="post" autocomplete="off">
+            
+                <div class="form-group">
+                    <label for="inome">Nome da empresa</label>
+                    <input type="text" class="form-control" name="nome" id="inome" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="iend">Endereço</label>
+                    <input type="text" class="form-control" name="end" id="iend">
+                    <small id="emailHelp" class="form-text text-muted">Ex.: Rua Praça da Bandeira, nº25, Centro, Itacaré</small>
+                </div>
+      
+                <div class="form-group">
+                    <label for="inum">CNPJ</label>
+                    <input type="number" class="form-control" name="cnpj" id="icnpj" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="itel">Telefone comercial</label>
+                    <input type="number" class="form-control" name="tel" id="itel" required placeholder="(xx) x xxxx-xxxx">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            
+        </form>
+        </div>
+        <div id="aba-3">
+            <p>Selecione os produtos desejados</p>
+            <!-- <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="" id="check1">
+                <label class="form-check-label" for="check1">
+                  Produto x
+                </label>
+            </div> -->
+
     
+        </div>
+    </div>
 </body>
 </html>
