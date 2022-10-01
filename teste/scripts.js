@@ -58,7 +58,7 @@ function cadastrar() {
         var itemExcluir = $(this).parent().parent().find(".prod").html();
         if(confirm('Realmente deseja excluir' + ' ' + itemExcluir + ' ' + '?') == 1) {
             var trash = '<tr>' + $(this).parent().parent().html() + '</tr>';
-            $("#lista_produtos_trash").append(trash);
+            $("#lista_produtos_trash").prepend(trash);
             $(this).parent().parent().remove();
         }
     });
