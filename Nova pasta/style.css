@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+.ui-widget-header {
+    border: 1px solid #aaaaaa;
+    background: #6b6b6b;
+    color: #222222;
+    font-weight: bold;
+}
