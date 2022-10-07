@@ -1,0 +1,13 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+    $.ajax({
+        method: "GET",
+        url: "https://api.slojas.com/testeJunior.php",
+        data:{"teste1":"okkkkk", "teste2":" blz "}
+      }).done(function(msg) {
+        console.log(msg);
+        var objeto = JSON.parse(msg);
+        console.log(objeto);
+        });
+</script>
