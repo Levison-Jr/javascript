@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <p><label for="pais">Em que país você nasceu?</label>
+        <input type="text" name="pais" id="pais">
+        <input type="button" value="Verificar" id="botao">
+        <div id="res"></div>
+    </p>
+    <script>
+        document.querySelector('#botao').addEventListener('click', verificar);
+
+        function verificar() {
+            var pais = document.querySelector('#pais').value;
+            var res = document.querySelector('#res');
+
+            if (pais != '') {
+                if (pais.toLowerCase() == 'brasil') {
+                res.innerHTML= `No <strong>Brasil</strong>, você é um <strong>nativo</strong>!`;
+                } else {
+                res.innerHTML = `No <strong>Brasil</strong>, já que você nasceu no país <strong>${pais}</strong>, você é um <strong>estrangeiro</strong>!`;
+                }
+            } else {
+                alert('Digite o seu país de origem!!!')
+            }
+        }
+    </script>
+</body>
+</html>
