@@ -33,9 +33,11 @@
 
     <script>
         var bloco = document.getElementById('area');
-        bloco.addEventListener('click', clicou);
-        bloco.addEventListener('mouseenter', entrou);
+        var i = 1;
+        // bloco.addEventListener('click', clicou);
+        // bloco.addEventListener('mouseenter', entrou);
         bloco.addEventListener('mouseout', saiu);
+        bloco.addEventListener('mouseover', over);
 
         function clicou() {
             bloco.style.backgroundColor = 'blue';
@@ -50,6 +52,12 @@
         function saiu() {
             bloco.style.backgroundColor = 'rgb(114, 9, 88)';
             bloco.innerHTML = 'SAIU!!!';
+        }
+
+        function over() {
+            bloco.style.backgroundColor = 'red';
+            bloco.innerHTML = i;
+            i++;
         }
     </script>
 </body>
