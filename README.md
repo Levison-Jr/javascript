@@ -1,2 +1,2 @@
 # javascript
- Pasta destinada para os estudos de JavaScript
+ Repositório usado para materiais de estudos de JavaScript (básico)
